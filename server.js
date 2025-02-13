@@ -20,14 +20,18 @@ app.get('/', (req, res) => {
 // API for the TTS part
 app.post('/tts', (req, res) => { 
 
-    const { text } = req.body;
+    const { text, voice } = req.body;
 
     if (!text) {
         return res.status(400).json({ message: 'Text is required!' });
     }
 
+    const selectedVoice = voice === "male" ? "male" : "female";
+
     let options = {
-        args: [text]
+        mode: 'text',
+        pythonOptions: ['-u'],  // Unbuffered output
+        args: [text, selectedVoice]
     }
 
     PythonShell.run('tts.py', options).then(results => {
@@ -35,7 +39,7 @@ app.post('/tts', (req, res) => {
         res.download(path.join(__dirname, 'output.mp3'));     // Sending the generated audio file to the client!
     }).catch(err => {
         console.error('Python script error: ', err);
-        res.status(500).json({ message: 'Internal server error! First one!' });
+        res.status(500).json({ message: 'Failed to generate speech!' });
     });
 });
 
