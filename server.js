@@ -20,18 +20,19 @@ app.get('/', (req, res) => {
 // API for the TTS part
 app.post('/tts', (req, res) => { 
 
-    const { text, voice } = req.body;
+    const { text, voice, language } = req.body;
 
     if (!text) {
         return res.status(400).json({ message: 'Text is required!' });
     }
 
     const selectedVoice = voice === "male" ? "male" : "female";
+    const selectedLanguage = language === "bn" ? "bn" : "en";
 
     let options = {
         mode: 'text',
         pythonOptions: ['-u'],  // Unbuffered output
-        args: [text, selectedVoice]
+        args: [text, selectedVoice, selectedLanguage]
     }
 
     PythonShell.run('tts.py', options).then(results => {
