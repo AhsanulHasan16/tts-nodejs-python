@@ -12,7 +12,7 @@ STT was harder compared to TTS but I managed to implement it in the project.
 For easier testing, what I did was, first in the TTS API, I got a speech from an English text, and then after that, I just took that mp3 file of the output and uploaded it in the STT API. Pretty neat.
 
 
-Not sure if I will be adding anything else in the project but there are some more ideas that are boiling inside of me. So let's see.
+Not sure if I will be adding anything else in the project but there are some more ideas that are boiling inside of me. Maybe a bengali STT if I can? Let's see.
 
 
 - Saki
