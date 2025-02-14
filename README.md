@@ -14,5 +14,7 @@ For easier testing, what I did was, first in the TTS API, I got a speech from an
 
 Not sure if I will be adding anything else in the project but there are some more ideas that are boiling inside of me. Maybe a bengali STT if I can? Let's see.
 
+Another idea I have for this one is to make a mobile app out of it. Will need to take a look at react native. Won't be that much of a problem. In sha Allah!
+
 
 - Saki
