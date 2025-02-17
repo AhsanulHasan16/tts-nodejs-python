@@ -17,5 +17,14 @@ Not sure if I will be adding anything else in the project but there are some mor
 Another idea I have for this one is to make a mobile app out of it. Will need to take a look at react native. Won't be that much of a problem. In sha Allah!
 
 
+Ok, so bengali STT is done! Hell yeah!
+
+Though it looks like it's only a handful of lines of code but it took like a whole day to implement this thing. But I'm satisfied that I was able to achieve this today.
+
+
+The next goal for this project is to make this one into a mobile app. I was thinking about learning react native and this will be the perfect opportunity to do that.
+
+Not sure how much time that would take, but it will surely take a while. But I will achieve that too, in sha Allah!
+
 
 - Saki
