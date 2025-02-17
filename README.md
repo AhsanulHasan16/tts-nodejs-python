@@ -17,4 +17,5 @@ Not sure if I will be adding anything else in the project but there are some mor
 Another idea I have for this one is to make a mobile app out of it. Will need to take a look at react native. Won't be that much of a problem. In sha Allah!
 
 
+
 - Saki
