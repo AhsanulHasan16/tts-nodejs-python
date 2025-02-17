@@ -62,9 +62,13 @@ app.post('/stt', upload.single('audio'), async (req, res) => {
         const audioFilePath = path.join(__dirname, req.file.path);
         console.log('Audio File Path: ', audioFilePath);
 
+        const { language } = req.body;
+        const selectedLanguage = language === "bn-BD" ? "bn-BD" : "en"    // Default is English
+
         // Sending the audio file path to the python server
         const response = await axios.post('http://localhost:5001/stt', { 
-            audio_path: audioFilePath
+            audio_path: audioFilePath,
+            language: selectedLanguage
         });
 
         fs.unlinkSync(audioFilePath);    // Deleting the audio file after use
